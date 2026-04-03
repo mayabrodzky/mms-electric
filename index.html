@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>מ.מ.ש חשמל בע"מ | יבוא, ייצוג, פיתוח ושיווק מוצרי חשמל</title>
+<title>מ.מ.ש חשמל בע"מ | יבוא, ייצור, פיתוח ושיווק מוצרי חשמל</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 <style>
@@ -229,12 +229,10 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
   align-items: center;
   justify-content: center;
 }
-</style></head>
-<a href="https://wa.me/972526455535?text=שלום,%20הגעתי%20דרך%20האתר%20ואשמח%20לייעוץ%20בנושא..." class="whatsapp-float" target="_blank">
-  <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-  </svg>
-</a>
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
 <body>
 
 <!-- TOP BAR -->
@@ -271,7 +269,7 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
   <div class="hero-content">
     <div class="hero-tag">⚡ יבוא • ייצור • פיתוח • שיווק</div>
     <h1>מ.מ.ש חשמל<br><span class="red">בע"מ</span></h1>
-    <p class="hero-sub">מובילים בתחום מוצרי החשמל והתעשייה מאז 1990.<br>יבוא ישיר, ייצוג בלעדי, ושירות מקצועי ממשרדינו בחיפה.</p>
+    <p class="hero-sub">מובילים בתחום מוצרי החשמל והתעשייה מאז 1990.<br>יבוא ישיר, ייצור בלעדי, ושירות מקצועי ממשרדינו בחיפה.</p>
     <div class="hero-buttons">
       <a href="#products" class="btn-primary">🔌 המוצרים שלנו</a>
       <a href="#contact" class="btn-outline">📞 צור קשר</a>
@@ -288,6 +286,36 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
   <div class="stat"><div class="stat-n">100+</div><div class="stat-l">לקוחות מרוצים</div></div>
 </div><section id="personal-intro">
     <style>
+      /* Swiper Specific Styling */
+      .mySwiper {
+        width: 100%;
+        padding-bottom: 50px; /* רווח לנקודות בתחתית */
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        height: auto;
+      }
+
+      /* צבע החצים שיתאים למותג של אבא */
+      .swiper-button-next, .swiper-button-prev {
+        color: var(--red-bright) !important;
+        top: 50%;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--red-bright) !important;
+      }
+
+      .swiper-button-next, .swiper-button-prev {
+        color: var(--red-bright) !important;
+        background: rgba(0,0,0,0.5);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        }
+
       .personal-intro {
         background: linear-gradient(135deg, #111 0%, #1a0505 100%);
         padding: 80px 40px;
@@ -434,209 +462,201 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
       <h2 class="section-title">פתרונות חשמל מקצועיים</h2>
       <p class="section-sub">מגוון רחב של מוצרי חשמל ותעשייה – ממקורות היצור הטובים בעולם</p>
     </div>
-    <div class="products-grid">
-      <a href="https://digitaler.cld.bz/mms-2023/7/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="15" y="10" width="90" height="100" rx="4" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
-    <rect x="20" y="18" width="80" height="84" rx="2" fill="#111"></rect>
-    <rect x="25" y="22" width="70" height="6" rx="1" fill="#222"></rect>
-    <rect x="28" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
-    <rect x="31" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
-    <rect x="34" y="40" width="2" height="10" rx="1" fill="#555"></rect>
-    <rect x="46" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
-    <rect x="49" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
-    <rect x="52" y="40" width="2" height="10" rx="1" fill="#555"></rect>
-    <rect x="64" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
-    <rect x="67" y="33" width="8" height="5" rx="1" fill="#555"></rect>
-    <rect x="70" y="40" width="2" height="10" rx="1" fill="#444"></rect>
-    <rect x="82" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
-    <rect x="85" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
-    <rect x="88" y="40" width="2" height="10" rx="1" fill="#555"></rect>
-    <rect x="25" y="58" width="70" height="6" rx="1" fill="#222"></rect>
-    <rect x="28" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="30" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
-    <rect x="40" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="42" y="68" width="5" height="4" rx="0.5" fill="#666"></rect>
-    <rect x="52" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="54" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
-    <rect x="64" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="66" y="68" width="5" height="4" rx="0.5" fill="#555"></rect>
-    <rect x="76" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="78" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
-    <rect x="88" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="90" y="68" width="5" height="4" rx="0.5" fill="#444"></rect>
-    <rect x="25" y="88" width="70" height="10" rx="2" fill="#151515" stroke="#222" stroke-width="0.8"></rect>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">SAKS-POL</div>
-          <div class="product-name">ארונות תקן DIN</div>
-          <div class="product-desc">ארונות עם סוקל DIN, שרטוטים ומידות מדויקים, לכל צורך תעשייתי</div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/7/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="15" y="10" width="90" height="100" rx="4" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
+                  <rect x="20" y="18" width="80" height="84" rx="2" fill="#111"></rect>
+                  <rect x="25" y="22" width="70" height="6" rx="1" fill="#222"></rect>
+                  <rect x="28" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
+                  <rect x="31" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
+                  <rect x="34" y="40" width="2" height="10" rx="1" fill="#555"></rect>
+                  <rect x="46" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
+                  <rect x="49" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
+                  <rect x="52" y="40" width="2" height="10" rx="1" fill="#555"></rect>
+                  <rect x="64" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
+                  <rect x="67" y="33" width="8" height="5" rx="1" fill="#555"></rect>
+                  <rect x="70" y="40" width="2" height="10" rx="1" fill="#444"></rect>
+                  <rect x="82" y="30" width="14" height="22" rx="2" fill="#252525" stroke="#444" stroke-width="1"></rect>
+                  <rect x="85" y="33" width="8" height="5" rx="1" fill="#c0392b"></rect>
+                  <rect x="88" y="40" width="2" height="10" rx="1" fill="#555"></rect>
+                  <rect x="25" y="58" width="70" height="6" rx="1" fill="#222"></rect>
+                  <rect x="28" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="30" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
+                  <rect x="40" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="42" y="68" width="5" height="4" rx="0.5" fill="#666"></rect>
+                  <rect x="52" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="54" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
+                  <rect x="64" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="66" y="68" width="5" height="4" rx="0.5" fill="#555"></rect>
+                  <rect x="76" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="78" y="68" width="5" height="4" rx="0.5" fill="#c0392b"></rect>
+                  <rect x="88" y="66" width="9" height="16" rx="1" fill="#1e1e1e" stroke="#333" stroke-width="0.8"></rect>
+                  <rect x="90" y="68" width="5" height="4" rx="0.5" fill="#444"></rect>
+                  <rect x="25" y="88" width="70" height="10" rx="2" fill="#151515" stroke="#222" stroke-width="0.8"></rect>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">SAKS-POL</div>
+              <div class="product-name">ארונות תקן DIN</div>
+              <div class="product-desc">ארונות עם סוקל DIN, שרטוטים ומידות מדויקים, לכל צורך תעשייתי</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/12/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="10" y="20" width="100" height="80" rx="8" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
-    <rect x="15" y="25" width="90" height="70" rx="6" fill="#111"></rect>
-    <rect x="15" y="25" width="90" height="70" rx="6" fill="none" stroke="#222" stroke-width="4"></rect>
-    <rect x="20" y="30" width="80" height="60" rx="4" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"></rect>
-    <circle cx="60" cy="60" r="18" fill="#1a1a1a" stroke="#333" stroke-width="1"></circle>
-    <text x="60" y="56" fill="#c0392b" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">IP65</text>
-    <text x="60" y="68" fill="#555" font-size="7" font-family="monospace" text-anchor="middle">SEALED</text>
-    <rect x="48" y="18" width="24" height="8" rx="3" fill="#222" stroke="#333" stroke-width="1"></rect>
-    <circle cx="60" cy="22" r="2" fill="#555"></circle>
-    <rect x="10" y="56" width="5" height="16" rx="2" fill="#222" stroke="#333" stroke-width="1"></rect>
-    <rect x="105" y="56" width="5" height="16" rx="2" fill="#222" stroke="#333" stroke-width="1"></rect>
-    <text x="60" y="105" fill="#333" font-size="7" font-family="monospace" text-anchor="middle">POLYESTER ENCLOSURE</text>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">SUBOX</div>
-          <div class="product-name">ארונות פוליאסטר אטומים</div>
-          <div class="product-desc">ארונות IP65/IP66 עמידים למים ואבק, מתאימים לסביבות קשות</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/12/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="20" width="100" height="80" rx="8" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
+                  <rect x="15" y="25" width="90" height="70" rx="6" fill="#111"></rect>
+                  <rect x="15" y="25" width="90" height="70" rx="6" fill="none" stroke="#222" stroke-width="4"></rect>
+                  <rect x="20" y="30" width="80" height="60" rx="4" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"></rect>
+                  <circle cx="60" cy="60" r="18" fill="#1a1a1a" stroke="#333" stroke-width="1"></circle>
+                  <text x="60" y="56" fill="#c0392b" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">IP65</text>
+                  <text x="60" y="68" fill="#555" font-size="7" font-family="monospace" text-anchor="middle">SEALED</text>
+                  <rect x="48" y="18" width="24" height="8" rx="3" fill="#222" stroke="#333" stroke-width="1"></rect>
+                  <circle cx="60" cy="22" r="2" fill="#555"></circle>
+                  <rect x="10" y="56" width="5" height="16" rx="2" fill="#222" stroke="#333" stroke-width="1"></rect>
+                  <rect x="105" y="56" width="5" height="16" rx="2" fill="#222" stroke="#333" stroke-width="1"></rect>
+                  <text x="60" y="105" fill="#333" font-size="7" font-family="monospace" text-anchor="middle">POLYESTER ENCLOSURE</text>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">SUBOX</div>
+              <div class="product-name">ארונות פוליאסטר אטומים</div>
+              <div class="product-desc">ארונות IP65/IP66 עמידים למים ואבק, מתאימים לסביבות קשות</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/14/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="20" y="8" width="80" height="104" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="2"></rect>
-    <rect x="24" y="12" width="72" height="96" rx="2" fill="#111"></rect>
-    <rect x="20" y="8" width="80" height="12" rx="3" fill="#222"></rect>
-    <rect x="24" y="11" width="72" height="6" rx="1" fill="#1a1a1a"></rect>
-    <rect x="24" y="50" width="72" height="3" rx="1" fill="#1e1e1e"></rect>
-    <rect x="30" y="22" width="60" height="24" rx="2" fill="#151515" stroke="#222" stroke-width="1"></rect>
-    <rect x="35" y="26" width="12" height="16" rx="2" fill="#1e1e1e" stroke="#333" stroke-width="1"></rect>
-    <rect x="38" y="29" width="6" height="10" rx="1" fill="#c0392b" opacity="0.7"></rect>
-    <rect x="52" y="26" width="12" height="16" rx="2" fill="#1e1e1e" stroke="#333" stroke-width="1"></rect>
-    <rect x="55" y="29" width="6" height="10" rx="1" fill="#333"></rect>
-    <rect x="69" y="26" width="12" height="16" rx="2" fill="#1e1e1e" stroke="#333" stroke-width="1"></rect>
-    <rect x="72" y="29" width="6" height="10" rx="1" fill="#333"></rect>
-    <rect x="30" y="58" width="60" height="38" rx="2" fill="#151515" stroke="#222" stroke-width="1"></rect>
-    <circle cx="60" cy="77" r="12" fill="#1a1a1a" stroke="#333" stroke-width="1.5"></circle>
-    <circle cx="60" cy="77" r="5" fill="#222" stroke="#444" stroke-width="1"></circle>
-    <rect x="58" y="67" width="4" height="10" rx="1" fill="#555"></rect>
-    <rect x="20" y="100" width="80" height="6" rx="2" fill="#1e1e1e" stroke="#333" stroke-width="1"></rect>
-    <rect x="45" y="102" width="30" height="2" fill="#333"></rect>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">TONGUN</div>
-          <div class="product-name">ארונות פלדה</div>
-          <div class="product-desc">ארונות פלדה איכותיים במגוון גדלים לכל יישום תעשייתי</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/14/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="8" width="80" height="104" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="2"></rect>
+                  <rect x="24" y="12" width="72" height="96" rx="2" fill="#111"></rect>
+                  <rect x="20" y="8" width="80" height="12" rx="3" fill="#222"></rect>
+                  <rect x="30" y="22" width="60" height="24" rx="2" fill="#151515" stroke="#222" stroke-width="1"></rect>
+                  <circle cx="60" cy="77" r="12" fill="#1a1a1a" stroke="#333" stroke-width="1.5"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">TONGUN</div>
+              <div class="product-name">ארונות פלדה</div>
+              <div class="product-desc">ארונות פלדה איכותיים במגוון גדלים לכל יישום תעשייתי</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/20/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <path d="M60 10 L100 28 L100 75 Q100 100 60 112 Q20 100 20 75 L20 28 Z" fill="#1a1a1a" stroke="#c0392b" stroke-width="2"></path>
-    <path d="M60 18 L93 33 L93 74 Q93 96 60 106 Q27 96 27 74 L27 33 Z" fill="#111"></path>
-    <path d="M60 24 L87 37 L87 72 Q87 91 60 100 Q33 91 33 72 L33 37 Z" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="1"></path>
-    <text x="60" y="60" fill="#c0392b" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">IK10</text>
-    <text x="60" y="74" fill="#555" font-size="8" font-family="monospace" text-anchor="middle">ARMORED</text>
-    <circle cx="60" cy="45" r="8" fill="#1a1a1a" stroke="#333" stroke-width="1.5"></circle>
-    <path d="M57 42 L63 42 L65 48 L60 52 L55 48 Z" fill="#c0392b" opacity="0.6"></path>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">פוליאסטר משוריין</div>
-          <div class="product-name">ארונות משוריינים</div>
-          <div class="product-desc">ארונות פוליאסטר בעלי עמידות גבוהה לתנאי שדה קיצוניים</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/20/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M60 10 L100 28 L100 75 Q100 100 60 112 Q20 100 20 75 L20 28 Z" fill="#1a1a1a" stroke="#c0392b" stroke-width="2"></path>
+                  <text x="60" y="60" fill="#c0392b" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">IK10</text>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">פוליאסטר משוריין</div>
+              <div class="product-name">ארונות משוריינים</div>
+              <div class="product-desc">ארונות פוליאסטר בעלי עמידות גבוהה לתנאי שדה קיצוניים</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/28/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="20" y="30" width="80" height="55" rx="6" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
-    <rect x="25" y="35" width="70" height="30" rx="4" fill="#111"></rect>
-    <rect x="28" y="70" width="64" height="8" rx="2" fill="#0d0d0d"></rect>
-    <rect x="35" y="73" width="50" height="2" rx="1" fill="#c0392b" opacity="0.6"></rect>
-    <rect x="30" y="40" width="60" height="20" rx="2" fill="#0a0a0a" stroke="#222" stroke-width="0.8"></rect>
-    <text x="60" y="53" fill="#c0392b" font-size="8" font-family="monospace" text-anchor="middle">L1 L2 L3 PE N</text>
-    <rect x="88" y="38" width="8" height="10" rx="2" fill="#c0392b" opacity="0.8"></rect>
-    <rect x="15" y="75" width="12" height="4" rx="1" fill="#333"></rect>
-    <rect x="93" y="75" width="12" height="4" rx="1" fill="#333"></rect>
-    <rect x="3" y="73" width="15" height="8" rx="2" fill="#222" stroke="#333" stroke-width="0.8"></rect>
-    <rect x="5" y="75" width="11" height="4" rx="1" fill="#c0392b" opacity="0.5"></rect>
-    <path d="M18 77 L25 77" stroke="#c0392b" stroke-width="1.5"></path>
-    <rect x="40" y="88" width="40" height="10" rx="2" fill="#151515" stroke="#222" stroke-width="1"></rect>
-    <circle cx="35" cy="93" r="5" fill="#1a1a1a" stroke="#333" stroke-width="1"></circle>
-    <circle cx="85" cy="93" r="5" fill="#1a1a1a" stroke="#333" stroke-width="1"></circle>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">ECONIX</div>
-          <div class="product-name">מדפסת סמניות לחוטים</div>
-          <div class="product-desc">מדפסת מקצועית לסימון חוטים וכבלים בלוחות חשמל</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/28/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="30" width="80" height="55" rx="6" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
+                  <text x="60" y="53" fill="#c0392b" font-size="8" font-family="monospace" text-anchor="middle">L1 L2 L3 PE N</text>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">ECONIX</div>
+              <div class="product-name">מדפסת סמניות לחוטים</div>
+              <div class="product-desc">מדפסת מקצועית לסימון חוטים וכבלים בלוחות חשמל</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/32/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <line x1="20" y1="30" x2="20" y2="90" stroke="#c0392b" stroke-width="5" stroke-linecap="round"></line>
-    <line x1="35" y1="30" x2="35" y2="90" stroke="#555" stroke-width="4" stroke-linecap="round"></line>
-    <line x1="50" y1="30" x2="50" y2="90" stroke="#c0392b" stroke-width="5" stroke-linecap="round"></line>
-    <line x1="65" y1="30" x2="65" y2="90" stroke="#444" stroke-width="4" stroke-linecap="round"></line>
-    <line x1="80" y1="30" x2="80" y2="90" stroke="#c0392b" stroke-width="5" stroke-linecap="round"></line>
-    <line x1="95" y1="30" x2="95" y2="90" stroke="#555" stroke-width="4" stroke-linecap="round"></line>
-    <rect x="12" y="55" width="96" height="14" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1.5"></rect>
-    <rect x="14" y="57" width="92" height="10" rx="2" fill="#111"></rect>
-    <circle cx="20" cy="62" r="4" fill="#c0392b" opacity="0.7"></circle>
-    <circle cx="35" cy="62" r="4" fill="#444"></circle>
-    <circle cx="50" cy="62" r="4" fill="#c0392b" opacity="0.7"></circle>
-    <circle cx="65" cy="62" r="4" fill="#444"></circle>
-    <circle cx="80" cy="62" r="4" fill="#c0392b" opacity="0.7"></circle>
-    <circle cx="95" cy="62" r="4" fill="#444"></circle>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">אביזרי ארון</div>
-          <div class="product-name">מפצלות לכבלים</div>
-          <div class="product-desc">מפצלות, צינורות ואביזרי הגנה לכבלים – לכל סוג ארון</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/32/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="20" y1="30" x2="20" y2="90" stroke="#c0392b" stroke-width="5" stroke-linecap="round"></line>
+                  <rect x="12" y="55" width="96" height="14" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1.5"></rect>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">אביזרי ארון</div>
+              <div class="product-name">מפצלות לכבלים</div>
+              <div class="product-desc">מפצלות, צינורות ואביזרי הגנה לכבלים – לכל סוג ארון</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/26/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="15" y="15" width="90" height="90" rx="8" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
-    <rect x="20" y="20" width="80" height="80" rx="6" fill="#111"></rect>
-    <circle cx="60" cy="60" r="35" fill="#0d0d0d" stroke="#222" stroke-width="1"></circle>
-    <circle cx="60" cy="60" r="8" fill="#1a1a1a" stroke="#444" stroke-width="2"></circle>
-    <path d="M60 25 Q75 35 68 52 Q55 45 60 25Z" fill="#c0392b" opacity="0.7"></path>
-    <path d="M95 60 Q85 75 68 68 Q75 55 95 60Z" fill="#c0392b" opacity="0.5"></path>
-    <path d="M60 95 Q45 85 52 68 Q65 75 60 95Z" fill="#c0392b" opacity="0.7"></path>
-    <path d="M25 60 Q35 45 52 52 Q45 65 25 60Z" fill="#c0392b" opacity="0.5"></path>
-    <circle cx="60" cy="60" r="5" fill="#333" stroke="#555" stroke-width="1"></circle>
-    <rect x="55" y="15" width="10" height="5" rx="1" fill="#222"></rect>
-    <rect x="55" y="100" width="10" height="5" rx="1" fill="#222"></rect>
-    <rect x="15" y="55" width="5" height="10" rx="1" fill="#222"></rect>
-    <rect x="100" y="55" width="5" height="10" rx="1" fill="#222"></rect>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">אביזרי ארון</div>
-          <div class="product-name">מאווררים ומסננים</div>
-          <div class="product-desc">מאווררים, מסננים ואביזרי קירור לארונות חשמל תעשייתיים</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/26/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="15" y="15" width="90" height="90" rx="8" fill="#1a1a1a" stroke="#c0392b" stroke-width="1.5"></rect>
+                  <circle cx="60" cy="60" r="35" fill="#0d0d0d" stroke="#222" stroke-width="1"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">אביזרי ארון</div>
+              <div class="product-name">מאווררים ומסננים</div>
+              <div class="product-desc">מאווררים, מסננים ואביזרי קירור לארונות חשמל תעשייתיים</div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="https://digitaler.cld.bz/mms-2023/4/" target="_blank" class="product-card">
-        <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);"><div style="width:130px;height:130px;"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="60" cy="38" r="18" fill="#1a1a1a" stroke="#f39c12" stroke-width="1.5" opacity="0.9"></circle>
-    <circle cx="60" cy="38" r="12" fill="#f39c12" opacity="0.15"></circle>
-    <line x1="60" y1="14" x2="60" y2="8" stroke="#f39c12" stroke-width="2" opacity="0.7"></line>
-    <line x1="60" y1="62" x2="60" y2="68" stroke="#f39c12" stroke-width="2" opacity="0.7"></line>
-    <line x1="36" y1="38" x2="30" y2="38" stroke="#f39c12" stroke-width="2" opacity="0.7"></line>
-    <line x1="84" y1="38" x2="90" y2="38" stroke="#f39c12" stroke-width="2" opacity="0.7"></line>
-    <line x1="43" y1="21" x2="39" y2="17" stroke="#f39c12" stroke-width="2" opacity="0.5"></line>
-    <line x1="77" y1="21" x2="81" y2="17" stroke="#f39c12" stroke-width="2" opacity="0.5"></line>
-    <rect x="10" y="72" width="45" height="30" rx="2" fill="#1a1a1a" stroke="#c0392b" stroke-width="1"></rect>
-    <line x1="10" y1="82" x2="55" y2="82" stroke="#222" stroke-width="1"></line>
-    <line x1="10" y1="92" x2="55" y2="92" stroke="#222" stroke-width="1"></line>
-    <line x1="27" y1="72" x2="27" y2="102" stroke="#222" stroke-width="1"></line>
-    <line x1="37" y1="72" x2="37" y2="102" stroke="#222" stroke-width="1"></line>
-    <rect x="65" y="72" width="45" height="30" rx="2" fill="#1a1a1a" stroke="#c0392b" stroke-width="1"></rect>
-    <line x1="65" y1="82" x2="110" y2="82" stroke="#222" stroke-width="1"></line>
-    <line x1="65" y1="92" x2="110" y2="92" stroke="#222" stroke-width="1"></line>
-    <line x1="82" y1="72" x2="82" y2="102" stroke="#222" stroke-width="1"></line>
-    <line x1="92" y1="72" x2="92" y2="102" stroke="#222" stroke-width="1"></line>
-    <line x1="55" y1="87" x2="65" y2="87" stroke="#c0392b" stroke-width="1.5"></line>
-  </svg></div></div>
-        <div class="product-body">
-          <div class="product-brand">ELMEX</div>
-          <div class="product-name">מוצרים סולאריים</div>
-          <div class="product-desc">מוצרים משלימים למתקנים סולאריים לאנרגיה מתחדשת</div>
+
+        <div class="swiper-slide">
+          <a href="https://digitaler.cld.bz/mms-2023/4/" target="_blank" class="product-card">
+            <div class="product-img" style="width: 100%; height: 200px; background: rgb(13, 13, 13); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgb(26, 26, 26);">
+              <div style="width:130px;height:130px;">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="38" r="18" fill="#1a1a1a" stroke="#f39c12" stroke-width="1.5"></circle>
+                  <rect x="10" y="72" width="45" height="30" rx="2" fill="#1a1a1a" stroke="#c0392b" stroke-width="1"></rect>
+                </svg>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">ELMEX</div>
+              <div class="product-name">מוצרים סולאריים</div>
+              <div class="product-desc">מוצרים משלימים למתקנים סולאריים לאנרגיה מתחדשת</div>
+            </div>
+          </a>
         </div>
-      </a>
+
+      </div> <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
+
     <div style="text-align:center;margin-top:48px;">
-      <a href="https://digitaler.cld.bz/mms-2023" target="_blank" class="btn-primary">📖 לקטלוג המוצרים המלא </a>
+      <a href="https://digitaler.cld.bz/mms-2023" target="_blank" class="btn-primary">📖 לקטלוג המוצרים המלא</a>
     </div>
   </div>
 </section>
@@ -747,11 +767,41 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
   </div>
 </footer>
 
+<a href="https://wa.me/972526455535?text=שלום,%20הגעתי%20דרך%20האתר%20ואשמח%20לייעוץ%20בנושא..." class="whatsapp-float" target="_blank">
+  <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+  </svg>
+</a>
+
 <script>
 function handleSubmit(e){
   e.preventDefault();
   alert('תודה! פנייתך התקבלה. ניצור איתך קשר בהקדם.');
 }
 </script>
-
-
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,      // מוצר אחד במסך בטלפון
+    spaceBetween: 30,     // רווח בין המוצרים
+    loop: true,           // קרוסלה אינסופית
+    centeredSlides: false,
+    autoplay: {
+      delay: 3500,        // מעבר אוטומטי כל 3.5 שניות
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },  // 2 מוצרים בטאבלט
+      1024: { slidesPerView: 3 }, // 3 מוצרים במחשב
+    },
+  });
+</script>
+</body>
+</html>
