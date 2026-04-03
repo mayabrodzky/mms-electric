@@ -22,9 +22,12 @@ html{scroll-behavior:smooth;}
 body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;direction:rtl;overflow-x:hidden;}
 
 /* ===== TOP BAR ===== */
-.topbar{background:var(--red);padding:8px 24px;display:flex;justify-content:center;gap:32px;font-size:13px;font-weight:600;flex-wrap:wrap;}
-.topbar a{color:#fff;text-decoration:none;}
-.topbar span{opacity:.5;margin:0 4px;}
+.topbar{background:#0d0d0d;border-bottom:1px solid #1e1e1e;padding:7px 24px;display:flex;justify-content:center;gap:28px;font-size:12px;font-weight:500;flex-wrap:wrap;}
+.topbar a{color:#aaa;text-decoration:none;transition:color .2s;}
+.topbar a:hover{color:var(--red-bright);}
+.topbar .t-item{color:#888;display:flex;align-items:center;gap:6px;}
+.topbar .t-item svg{color:var(--red-bright);flex-shrink:0;}
+.topbar .t-sep{color:#2a2a2a;}
 
 /* ===== HEADER ===== */
 .header{background:rgba(10,10,10,0.97);backdrop-filter:blur(10px);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:999;}
@@ -294,13 +297,25 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <span>📞 <a href="tel:048721124">04-8721124</a></span>
-  <span style="opacity:.4">|</span>
-  <span>📱 חנן: <a href="tel:0526455535">052-6455535</a></span>
-  <span style="opacity:.4">|</span>
-  <span>✉️ <a href="mailto:hanan@m-m-s.co.il">hanan@m-m-s.co.il</a></span>
-  <span style="opacity:.4">|</span>
-  <span>📍 המסגר 7, חיפה</span>
+  <span class="t-item">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12 19.79 19.79 0 0 1 1.21 3.43 2 2 0 0 1 3.22 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.27 16z"/></svg>
+    <a href="tel:048721124">04-8721124</a>
+  </span>
+  <span class="t-sep">|</span>
+  <span class="t-item">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+    <a href="tel:0526455535">052-6455535</a>
+  </span>
+  <span class="t-sep">|</span>
+  <span class="t-item">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <a href="mailto:hanan@m-m-s.co.il">hanan@m-m-s.co.il</a>
+  </span>
+  <span class="t-sep">|</span>
+  <span class="t-item">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    המסגר 7, חיפה
+  </span>
 </div>
 
 <!-- HEADER -->
