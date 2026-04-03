@@ -37,8 +37,9 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
 
 /* ===== HERO ===== */
 .hero{position:relative;height:100vh;min-height:600px;max-height:820px;overflow:hidden;display:flex;align-items:flex-end;}
-.hero-bg{position:absolute;inset:0;background-image:url('hero-bg-new.png');background-size:cover;background-position:center top;filter:brightness(0.72);}
-.hero-gradient{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%);}
+.hero-video {position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 0; transform: translate(-50%, -50%); object-fit: cover; /* גורם לווידאו להתנהג כמו תמונת רקע */}
+.hero-bg{display:none}
+.hero-gradient{position:absolute;inset:0;z-index: 1; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);}
 .hero-content{position:relative;z-index:2;padding:60px 60px 70px;max-width:750px;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,.15);border:1px solid rgba(192,57,43,.4);color:var(--red-bright);font-size:12px;font-weight:700;letter-spacing:2px;padding:7px 16px;border-radius:20px;text-transform:uppercase;margin-bottom:24px;}
 .hero h1{font-size:58px;font-weight:900;line-height:1.08;margin-bottom:20px;color:#fff;}
@@ -261,6 +262,10 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
 
 <!-- HERO -->
 <section class="hero">
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-gradient"></div>
   <div class="hero-content">
@@ -749,8 +754,4 @@ function handleSubmit(e){
 }
 </script>
 
-<<<<<<< HEAD
-</body></html>
-=======
-</body></html>
->>>>>>> 828fc0d4ee928ca5331c074d3796da4f3bcefa7e
+
