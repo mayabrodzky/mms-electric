@@ -135,6 +135,11 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
 .form-field textarea{resize:vertical;min-height:130px;}
 .btn-submit{background:var(--red);color:#fff;padding:14px 32px;border-radius:8px;border:none;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .btn-submit:hover{background:var(--red-bright);}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed;}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;}
+.form-status{display:none;margin-top:6px;padding:12px 16px;border-radius:8px;font-size:14px;line-height:1.6;}
+.form-status.success{display:block;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.35);color:#2ecc71;}
+.form-status.error{display:block;background:rgba(231,76,60,.12);border:1px solid rgba(231,76,60,.35);color:#e74c3c;}
 .contact-info-side{display:flex;flex-direction:column;gap:20px;}
 .contact-card{background:var(--dark3);border:1px solid var(--border);border-radius:12px;padding:22px 20px;}
 .contact-card .cc-label{font-size:11px;color:var(--red-bright);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
@@ -1011,21 +1016,24 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
       <p class="section-sub">לשאלות, הזמנות ומידע על מוצרים – פנו אלינו ונחזור בהקדם</p>
     </div>
     <div class="contact-grid">
-      <form class="contact-form reveal reveal-left" onsubmit="handleSubmit(event)">
+      <form class="contact-form reveal reveal-left" id="contactForm" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="access_key" value="cb5b4f92-2c81-4198-9f04-b54eb769e1e6">
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
         <div class="form-row">
-          <div class="form-field"><label>שם מלא</label><input type="text" placeholder="ישראל ישראלי" required=""></div>
-          <div class="form-field"><label>חברה</label><input type="text" placeholder="שם החברה"></div>
+          <div class="form-field"><label>שם מלא</label><input type="text" name="name" placeholder="ישראל ישראלי" required=""></div>
+          <div class="form-field"><label>חברה</label><input type="text" name="company" placeholder="שם החברה"></div>
         </div>
         <div class="form-row">
-          <div class="form-field"><label>טלפון</label><input type="tel" placeholder="050-0000000" required=""></div>
-          <div class="form-field"><label>אימייל</label><input type="email" placeholder="mail@example.com"></div>
+          <div class="form-field"><label>טלפון</label><input type="tel" name="phone" placeholder="050-0000000" required=""></div>
+          <div class="form-field"><label>אימייל</label><input type="email" name="email" placeholder="mail@example.com"></div>
         </div>
         <div class="form-field">
           <label>נושא הפנייה</label>
-          <select><option>בקשת הצעת מחיר</option><option>מידע על מוצר</option><option>שאלה טכנית</option><option>אחר</option></select>
+          <select name="subject"><option>בקשת הצעת מחיר</option><option>מידע על מוצר</option><option>שאלה טכנית</option><option>אחר</option></select>
         </div>
-        <div class="form-field"><label>הודעה</label><textarea placeholder="תארו את הצורך שלכם..."></textarea></div>
+        <div class="form-field"><label>הודעה</label><textarea name="message" placeholder="תארו את הצורך שלכם..."></textarea></div>
         <button type="submit" class="btn-submit">✉️ שלח פנייה</button>
+        <div id="formStatus" class="form-status" role="status"></div>
         <p style="font-size:12px;color:var(--text-muted);margin-top:10px;line-height:1.6;">בשליחת הטופס אתה מאשר שקראת את <a href="privacy.html" style="color:var(--red-bright);text-decoration:none;">מדיניות הפרטיות</a> שלנו</p>
       </form>
       <div class="contact-info-side reveal reveal-right">
@@ -1039,7 +1047,7 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
             <a href="tel:048721124">04-8721124</a><br>
             <a href="tel:0526455535">052-6455535</a> (חנן)<br>
             <a href="tel:0526455533">052-6455533</a> (אילן)<br>
-            פקס: 04-8722331
+            פקס: <a href="tel:+97248722331">04-8722331</a>
           </div>
         </div>
         <div class="contact-card">
@@ -1062,7 +1070,7 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
   <img class="footer-logo" src="https://www.m-m-s.co.il/wp-content/uploads/2023/03/logo.jpg" alt="מ.מ.ש חשמל">
   <div class="footer-divider"></div>
   <div class="footer-text">
-    מ.מ.ש חשמל בע"מ &nbsp;|&nbsp; המסגר 7, חיפה &nbsp;|&nbsp; 04-8721124
+    מ.מ.ש חשמל בע"מ &nbsp;|&nbsp; המסגר 7, חיפה &nbsp;|&nbsp; <a href="tel:+97248721124">04-8721124</a>
   </div>
   <div class="footer-links" style="margin-top:6px;"><a href="privacy.html">מדיניות פרטיות</a></div>
 </footer>
@@ -1074,10 +1082,66 @@ body{font-family:'Heebo',Arial,sans-serif;background:var(--dark);color:#fff;dire
 </a>
 
 <script>
-function handleSubmit(e){
+async function handleSubmit(e){
   e.preventDefault();
-  alert('תודה! פנייתך התקבלה. ניצור איתך קשר בהקדם.');
+  var form = e.target;
+  var submitBtn = form.querySelector('.btn-submit');
+  var statusEl = document.getElementById('formStatus');
+
+  if (form.botcheck.checked) return;
+
+  if (!form.checkValidity()){
+    form.reportValidity();
+    return;
+  }
+
+  var originalBtnText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'שולח...';
+  statusEl.className = 'form-status';
+  statusEl.textContent = '';
+
+  try {
+    var formData = new FormData(form);
+    var response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+    var result = await response.json();
+
+    if (result.success){
+      statusEl.className = 'form-status success';
+      statusEl.textContent = 'תודה! פנייתך התקבלה בהצלחה. ניצור איתך קשר בהקדם.';
+      form.reset();
+    } else {
+      throw new Error(result.message || 'שליחה נכשלה');
+    }
+  } catch (error){
+    statusEl.className = 'form-status error';
+    statusEl.textContent = 'אירעה שגיאה בשליחת הפנייה. בדקו את החיבור לאינטרנט ונסו שוב, או צרו קשר בטלפון 04-8721124.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+  }
 }
+
+document.getElementById('contactForm').addEventListener('keydown', function(e){
+  var t = e.target;
+  if (e.key !== 'Enter' || t.tagName !== 'INPUT' || t.type === 'hidden' || t.type === 'checkbox') return;
+
+  e.preventDefault();
+
+  var form = e.currentTarget;
+  var fields = Array.prototype.filter.call(form.elements, function(el){
+    return !el.disabled && el.type !== 'hidden' && el.type !== 'checkbox'
+      && (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || (el.tagName === 'BUTTON' && el.type === 'submit'));
+  });
+  var idx = fields.indexOf(t);
+  if (idx > -1 && idx < fields.length - 1){
+    fields[idx + 1].focus();
+  }
+});
 </script>
 <script>
   var swiper = new Swiper(".mySwiper", {
